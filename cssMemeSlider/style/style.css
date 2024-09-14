@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+	font-size: 62.5%
+}
+
+body {
+    background-color: #5e606c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 100%;
+    height: 100vh;
+    padding: 5rem;
+}
+
+/* Images */
+
+.img-wrap {
+    width: calc( 100vmin - 15.2rem );
+    height: calc( 100% - 5.2rem );
+    margin-bottom: 2rem;
+    background: #e8d8c9;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.slide {
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+}
+
+.img-1 {
+    background-image: url("../assets/img/meme-1.png");
+}
+
+.img-2 {
+    background-image: url("../assets/img/meme-2.jpg");
+}
+
+.img-3 {
+    background-image: url("../assets/img/meme-3.png");
+}
+
+.img-4 {
+    background-image: url("../assets/img/meme-4.jpg");
+}
+
+/* Text */
+
+.text-wrap {
+    height: 3.2rem;
+    font-family: "Handjet", sans-serif;
+    font-weight: 600;
+    font-size: 3.2rem;
+    order: -1;
+    overflow: hidden;
+}
+
+.label {
+    display: block;
+}
+
+/* Controls */
+
+.controls-wrap {
+    display: flex;
+    justify-content: space-between;
+    order: 1;
+}
+
+.control-item {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+/* Slider Interactivity */
+
+.controls-wrap ~ .img-wrap > .slide {
+    opacity: 0;
+}
+
+.controls ~ .text-wrap > .label {
+    opacity: 0;
+}
+
+/* Choose First Slide */
+
+.controls-wrap:has(#slide-1:checked) ~ .img-wrap > .img-1 {
+    transition: opacity .7s;
+    opacity: 1;
+}
+
+.controls:has(#slide-1:checked) ~ .text-wrap > .label.slide-1 {
+    transition: opacity .7s;
+    opacity: 1;
+}
+
+/* Choose Second Slide */
+
+.controls-wrap:has(#slide-2:checked) ~ .img-wrap > .img-2 {
+    transform: translateY(-100%);
+    transition: opacity .7s;
+    opacity: 1;
+}
+
+.controls:has(#slide-2:checked) ~ .text-wrap > .label.slide-2 {
+    transform: translateY(-100%);
+    transition: opacity .7s;
+    opacity: 1;
+}
+
+/* Choose Third Slide */
+
+.controls-wrap:has(#slide-3:checked) ~ .img-wrap > .img-3 {
+    transform: translateY(-200%);
+    transition: opacity .7s;
+    opacity: 1;
+}
+
+.controls:has(#slide-3:checked) ~ .text-wrap > .label.slide-3 {
+    transform: translateY(-200%);
+    transition: opacity .7s;
+    opacity: 1;
+}
+
+/* Choose Fourth Slide */
+
+.controls-wrap:has(#slide-4:checked) ~ .img-wrap > .img-4 {
+    transform: translateY(-300%);
+    transition: opacity .7s;
+    opacity: 1;
+}
+
+.controls:has(#slide-4:checked) ~ .text-wrap > .label.slide-4 {
+    transform: translateY(-300%);
+    transition: opacity .7s;
+    opacity: 1;
+}
