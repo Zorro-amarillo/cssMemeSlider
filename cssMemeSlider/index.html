@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Meme Slider</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="controls-wrap">
+            <div class="controls">
+                <input class="control-item" type="radio" name="slide" id="slide-1" checked>
+                <input class="control-item" type="radio" name="slide" id="slide-2">
+                <input class="control-item" type="radio" name="slide" id="slide-3">
+                <input class="control-item" type="radio" name="slide" id="slide-4">
+            </div>
+            <div class="text-wrap">
+                <label class="label slide-1" for="slide-1">CSS Meme 1</label>
+                <label class="label slide-2" for="slide-2">CSS Meme 2</label>
+                <label class="label slide-3" for="slide-3">CSS Meme 3</label>
+                <label class="label slide-4" for="slide-4">CSS Meme 4</label>
+            </div>
+        </div>
+        <div class="img-wrap">
+            <div class="slide img-1"></div>
+            <div class="slide img-2"></div>
+            <div class="slide img-3"></div>
+            <div class="slide img-4"></div>
+        </div>
+    </div>
 </body>
 </html>
