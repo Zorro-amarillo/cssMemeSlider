@@ -25,7 +25,7 @@ body {
 
 .img-wrap {
     width: calc( 100vmin - 15.2rem );
-    height: calc( 100% - 5.2rem );
+    height: calc( 100% - 8.5rem );
     margin-bottom: 2rem;
     background: #e8d8c9;
     border-radius: 1rem;
@@ -79,10 +79,33 @@ body {
     order: 1;
 }
 
-.control-item {
-    width: 1.5rem;
-    height: 1.5rem;
+.standard-controls {
+    display: flex;
+    gap: 0.1rem;
+    transform: translateY(-70%);
+}
+
+.standard-control-item {
+    width: 3.55rem;
+    height: 4rem;
+    margin: 0;
+    cursor: pointer;
+    appearance: none;
+}
+
+.custom-controls {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.custom-control-item {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+    border: .4rem solid #e4babe;
+    background-color: #e4babe;
     border-radius: 100%;
+    transition: .3s;
     cursor: pointer;
 }
 
@@ -108,6 +131,10 @@ body {
     opacity: 1;
 }
 
+.controls:has(#slide-1:checked) > .custom-controls > .custom-control-item:first-child {
+    background-color: transparent;
+}
+
 /* Choose Second Slide */
 
 .controls-wrap:has(#slide-2:checked) ~ .img-wrap > .img-2 {
@@ -120,6 +147,10 @@ body {
     transform: translateY(-100%);
     transition: opacity .7s;
     opacity: 1;
+}
+
+.controls:has(#slide-2:checked) > .custom-controls > .custom-control-item:nth-child(2) {
+    background-color: transparent;
 }
 
 /* Choose Third Slide */
@@ -136,6 +167,10 @@ body {
     opacity: 1;
 }
 
+.controls:has(#slide-3:checked) > .custom-controls > .custom-control-item:nth-child(3) {
+    background-color: transparent;
+}
+
 /* Choose Fourth Slide */
 
 .controls-wrap:has(#slide-4:checked) ~ .img-wrap > .img-4 {
@@ -148,4 +183,53 @@ body {
     transform: translateY(-300%);
     transition: opacity .7s;
     opacity: 1;
+}
+
+.controls:has(#slide-4:checked) > .custom-controls > .custom-control-item:last-child {
+    background-color: transparent;
+}
+
+/* Control-Items on Hover */
+/* Non-Active Controls on Hover */
+
+.controls:has(#slide-1:hover) > .custom-controls > .custom-control-item:first-child {
+    border-color: #fcf1ef;
+    background-color: #fcf1ef;
+}
+
+.controls:has(#slide-2:hover) > .custom-controls > .custom-control-item:nth-child(2) {
+    border-color: #fcf1ef;
+    background-color: #fcf1ef;
+}
+
+.controls:has(#slide-3:hover) > .custom-controls > .custom-control-item:nth-child(3) {
+    border-color: #fcf1ef;
+    background-color: #fcf1ef;
+}
+
+.controls:has(#slide-4:hover) > .custom-controls > .custom-control-item:last-child {
+    border-color: #fcf1ef;
+    background-color: #fcf1ef;
+}
+
+/* Active Controls on Hover */
+
+.controls:has(#slide-1:checked:hover) > .custom-controls > .custom-control-item:first-child {
+    border-color: #fcf1ef;
+    background-color: transparent;
+}
+
+.controls:has(#slide-2:checked:hover) > .custom-controls > .custom-control-item:nth-child(2) {
+    border-color: #fcf1ef;
+    background-color: transparent;
+}
+
+.controls:has(#slide-3:checked:hover) > .custom-controls > .custom-control-item:nth-child(3) {
+    border-color: #fcf1ef;
+    background-color: transparent;
+}
+
+.controls:has(#slide-4:checked:hover) > .custom-controls > .custom-control-item:last-child {
+    border-color: #fcf1ef;
+    background-color: transparent;
 }
