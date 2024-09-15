@@ -5,6 +5,7 @@ html {
 
 body {
     background-color: #5e606c;
+    transition: .5s;
 }
 
 * {
@@ -24,11 +25,11 @@ body {
 /* Images */
 
 .img-wrap {
-    width: calc( 100vmin - 15.2rem );
+    width: calc( 100vmin - 18.5rem );
     height: calc( 100% - 8.5rem );
     margin-bottom: 2rem;
-    background: #e8d8c9;
-    border-radius: 1rem;
+    border: 2px solid #FFFFFF;
+    transition: .3s;
     overflow: hidden;
 }
 
@@ -41,18 +42,22 @@ body {
 }
 
 .img-1 {
-    background-image: url("../assets/img/meme-1.png");
+    background-color: #000000;
+    background-image: url("../assets/img/meme-1.jpg");
 }
 
 .img-2 {
+    background-color: #000000;
     background-image: url("../assets/img/meme-2.jpg");
 }
 
 .img-3 {
-    background-image: url("../assets/img/meme-3.png");
+    background-color: #191919;
+    background-image: url("../assets/img/meme-3.jpg");
 }
 
 .img-4 {
+    background-color: #C7C2BE;
     background-image: url("../assets/img/meme-4.jpg");
 }
 
@@ -69,6 +74,8 @@ body {
 
 .label {
     display: block;
+    transition: color .3s;
+    color: #FFFFFF;
 }
 
 /* Controls */
@@ -102,8 +109,8 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     margin: 0;
-    border: .4rem solid #e4babe;
-    background-color: #e4babe;
+    border: .4rem solid #FCB913;
+    background-color: #FCB913;
     border-radius: 100%;
     transition: .3s;
     cursor: pointer;
@@ -135,6 +142,10 @@ body {
     background-color: transparent;
 }
 
+body:has(#slide-1:checked) {
+    background-color: #000000;
+}
+
 /* Choose Second Slide */
 
 .controls-wrap:has(#slide-2:checked) ~ .img-wrap > .img-2 {
@@ -151,6 +162,10 @@ body {
 
 .controls:has(#slide-2:checked) > .custom-controls > .custom-control-item:nth-child(2) {
     background-color: transparent;
+}
+
+body:has(#slide-2:checked) {
+    background-color: #000000;
 }
 
 /* Choose Third Slide */
@@ -171,6 +186,10 @@ body {
     background-color: transparent;
 }
 
+body:has(#slide-3:checked) {
+    background-color: #191919;
+}
+
 /* Choose Fourth Slide */
 
 .controls-wrap:has(#slide-4:checked) ~ .img-wrap > .img-4 {
@@ -180,6 +199,7 @@ body {
 }
 
 .controls:has(#slide-4:checked) ~ .text-wrap > .label.slide-4 {
+    color: #000000;
     transform: translateY(-300%);
     transition: opacity .7s;
     opacity: 1;
@@ -189,47 +209,59 @@ body {
     background-color: transparent;
 }
 
+body:has(#slide-4:checked) {
+    background-color: #FFFFFF;
+}
+
+.controls-wrap:has(#slide-4:checked) ~ .img-wrap {
+    border: 2px solid #000000;
+}
+
 /* Control-Items on Hover */
 /* Non-Active Controls on Hover */
 
 .controls:has(#slide-1:hover) > .custom-controls > .custom-control-item:first-child {
-    border-color: #fcf1ef;
-    background-color: #fcf1ef;
+    border-color: #c7522a;
+    background-color: #c7522a;
 }
 
 .controls:has(#slide-2:hover) > .custom-controls > .custom-control-item:nth-child(2) {
-    border-color: #fcf1ef;
-    background-color: #fcf1ef;
+    border-color: #c7522a;
+    background-color: #c7522a;
 }
 
 .controls:has(#slide-3:hover) > .custom-controls > .custom-control-item:nth-child(3) {
-    border-color: #fcf1ef;
-    background-color: #fcf1ef;
+    border-color: #c7522a;
+    background-color: #c7522a;
 }
 
 .controls:has(#slide-4:hover) > .custom-controls > .custom-control-item:last-child {
-    border-color: #fcf1ef;
-    background-color: #fcf1ef;
+    border-color: #c7522a;
+    background-color: #c7522a;
 }
 
 /* Active Controls on Hover */
 
 .controls:has(#slide-1:checked:hover) > .custom-controls > .custom-control-item:first-child {
-    border-color: #fcf1ef;
+    border-color: #c7522a;
     background-color: transparent;
 }
 
 .controls:has(#slide-2:checked:hover) > .custom-controls > .custom-control-item:nth-child(2) {
-    border-color: #fcf1ef;
+    border-color: #c7522a;
     background-color: transparent;
 }
 
 .controls:has(#slide-3:checked:hover) > .custom-controls > .custom-control-item:nth-child(3) {
-    border-color: #fcf1ef;
+    border-color: #c7522a;
     background-color: transparent;
 }
 
 .controls:has(#slide-4:checked:hover) > .custom-controls > .custom-control-item:last-child {
-    border-color: #fcf1ef;
+    border-color: #c7522a;
     background-color: transparent;
+}
+
+@media (max-width: 576px) {
+
 }
