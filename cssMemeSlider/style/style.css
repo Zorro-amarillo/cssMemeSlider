@@ -270,6 +270,42 @@ body:has(#slide-4:checked) {
     background-color: transparent;
 }
 
+/* Active State */
+
+.controls:has(#slide-1:active) > .custom-controls > .custom-control-item:first-child {
+    background-color: #e5c185;
+}
+
+.controls:has(#slide-2:active) > .custom-controls > .custom-control-item:nth-child(2) {
+    background-color: #e5c185;
+}
+
+.controls:has(#slide-3:active) > .custom-controls > .custom-control-item:nth-child(3) {
+    background-color: #e5c185;
+}
+
+.controls:has(#slide-4:active) > .custom-controls > .custom-control-item:last-child {
+    background-color: #e5c185;
+}
+
+.controls:has(#slide-1:checked:active) > .custom-controls > .custom-control-item:first-child {
+    background-color: #e5c185;
+}
+
+.controls:has(#slide-2:checked:active) > .custom-controls > .custom-control-item:nth-child(2) {
+    background-color: #e5c185;
+}
+
+.controls:has(#slide-3:checked:active) > .custom-controls > .custom-control-item:nth-child(3) {
+    background-color: #e5c185;
+}
+
+.controls:has(#slide-4:checked:active) > .custom-controls > .custom-control-item:last-child {
+    background-color: #e5c185;
+}
+
+/* Media Queries */
+
 @media (max-width: 960px) {
     html {
         font-size: 56.25%;
